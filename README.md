@@ -25,6 +25,8 @@ straightforward way.
    0, "not allowed");`
    This is because we want to enable access to any program (in our case the
    Terminal app) so that it can change the user to `root`.
+   Note that we also have to comment out the line right before it with
+   `uid_t current_uid = getuid();` since unused variables are marked as errors during compilation.
 
 The Terminal app is available by enabling the developer mode in Android
 settings.
